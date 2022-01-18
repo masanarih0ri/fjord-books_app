@@ -28,3 +28,9 @@ ja:
     show:
       edit: '編集'
       back: '一覧に戻る'
+    create:
+      notice: '新規登録に成功しました'
+    update:
+      notice: '更新に成功しました'
+    destroy:
+      notice: '削除に成功しました'

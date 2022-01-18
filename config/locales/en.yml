@@ -59,3 +59,9 @@ en:
     show:
       edit: 'Edit'
       back: 'Back'
+    create:
+      notice: 'Create was successful'
+    update:
+      notice: 'Update was successful'
+    destroy:
+      notice: 'Destroy was successful'
