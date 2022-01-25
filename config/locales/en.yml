@@ -30,6 +30,8 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
+  common:
+    back: 'Back'
   helpers:
     submit:
       create: Create
@@ -51,14 +53,11 @@ en:
       confirm: 'Are you sure?'
     new:
       create: 'Create'
-      back: 'Back'
     edit:
       page_title: 'Edit Book'
       show: 'Show'
-      back: 'Back'
     show:
       edit: 'Edit'
-      back: 'Back'
     create:
       notice: 'Create was successful'
     update:

@@ -1,4 +1,6 @@
 ja:
+  common:
+    back: '一覧に戻る'
   helpers:
     submit:
       create: 登録する
@@ -20,14 +22,11 @@ ja:
       confirm: '本当に削除しますか？'
     new:
       create: '新規登録'
-      back: '一覧に戻る'
     edit:
       page_title: '書籍情報を編集'
       show: '詳細'
-      back: '一覧に戻る'
     show:
       edit: '編集'
-      back: '一覧に戻る'
     create:
       notice: '新規登録に成功しました'
     update:
