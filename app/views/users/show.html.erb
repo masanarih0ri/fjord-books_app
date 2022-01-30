@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong><%= User.human_attribute_name(:title) %>:</strong>
+  <%= @user.email %>
+</p>
+
+<p>
+  <strong><%= User.human_attribute_name(:memo) %>:</strong>
+  <%= @user.zipcode %>
+</p>
+
+<p>
+  <strong><%= User.human_attribute_name(:author) %>:</strong>
+  <%= @user.address %>
+</p>
+
+<p>
+  <strong><%= User.human_attribute_name(:picture) %>:</strong>
+  <%= @user.description %>
+</p>
+
+<% if current_user == @user %>
+  <%= link_to t('views.common.edit'), '/' %>
+  <%= link_to t('views.common.destroy'), '/' %>
+<% end %>
+<%= link_to t('views.common.back'), books_path %>
+
+<!--
+<# %= link_to t('views.common.edit'), edit_User_path(@user) %> |
+<# %= link_to t('views.common.back'), Users_path %>
+-->
