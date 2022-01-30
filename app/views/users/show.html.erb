@@ -1,27 +1,27 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong><%= User.human_attribute_name(:title) %>:</strong>
+  <strong><%= User.human_attribute_name(:email) %>:</strong>
   <%= @user.email %>
 </p>
 
 <p>
-  <strong><%= User.human_attribute_name(:memo) %>:</strong>
+  <strong><%= User.human_attribute_name(:zipcode) %>:</strong>
   <%= @user.zipcode %>
 </p>
 
 <p>
-  <strong><%= User.human_attribute_name(:author) %>:</strong>
+  <strong><%= User.human_attribute_name(:address) %>:</strong>
   <%= @user.address %>
 </p>
 
 <p>
-  <strong><%= User.human_attribute_name(:picture) %>:</strong>
+  <strong><%= User.human_attribute_name(:description) %>:</strong>
   <%= @user.description %>
 </p>
 
 <% if current_user == @user %>
-  <%= link_to t('views.common.edit'), '/' %>
+  <%= link_to t('views.common.edit'), edit_user_registration_path %>
   <%= link_to t('views.common.destroy'), '/' %>
 <% end %>
 <%= link_to t('views.common.back'), books_path %>
