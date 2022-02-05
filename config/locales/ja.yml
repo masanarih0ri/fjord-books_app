@@ -120,6 +120,13 @@ ja:
         sign_up: アカウント登録ページへ
         log_in: ログインページへ
       minimum_password_length: '（%{count}字以上）'
+    unlocks:
+      new:
+        title: アカウントのロック解除
+        resend_unlock_instructions: アカウントのロック解除方法を再送する
+        send_instructions: アカウントのロック解除方法を数分以内にメールでご連絡します。
+        send_paranoid_instructions: アカウントが見つかった場合、アカウントのロック解除方法を数分以内にメールでご連絡します。
+        unlocked: アカウントをロック解除しました。
   date:
     abbr_day_names:
     - 日
