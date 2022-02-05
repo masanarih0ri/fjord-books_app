@@ -42,6 +42,10 @@ ja:
         updated_at: 更新日
     models:
       user: ユーザー
+  layouts:
+    application:
+      logout: ログアウト
+      welcome: "ようこそ %{user} さん！"
   devise:
     sessions:
       user:

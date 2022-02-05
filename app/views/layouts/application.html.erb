@@ -11,8 +11,8 @@
 
   <body>
     <% if current_user.present? %>
-      <p>こんにちは、<%= current_user.email %>さん！</p>
-      <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+      <p><%= t('.welcome', user: current_user.email) %></p>
+      <%= link_to t('.logout'), destroy_user_session_path, method: :delete %>
     <% end %>
     <% if flash[:notice] %>
       <p><%= flash[:notice] %></p>
