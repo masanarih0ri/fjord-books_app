@@ -33,6 +33,16 @@
   <% end %>
 </p>
 
+<p>
+  <strong><%= t('.followings_count') %>:</strong>
+  <%= @follwings.size %>
+</p>
+
+<p>
+  <strong><%= t('.followers_count') %>:</strong>
+  <%= @follwers.size %>
+</p>
+
 <%= flash[:success] %>
 <%= flash[:danger] %>
 

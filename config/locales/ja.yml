@@ -228,6 +228,8 @@ ja:
     show:
       follow: 'フォローする'
       unfollow: 'フォローを解除する'
+      followings_count: 'フォロー数'
+      followers_count: 'フォロワー数'
   controllers:
     common:
       notice_create: "%{name}が作成されました。"
