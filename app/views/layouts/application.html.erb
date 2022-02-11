@@ -14,12 +14,6 @@
       <p><%= t('.welcome', user: current_user.email) %></p>
       <%= link_to t('.logout'), destroy_user_session_path, method: :delete %>
     <% end %>
-    <% if flash[:notice] %>
-      <p><%= flash[:notice] %></p>
-    <% end %>
-    <% if flash[:alert] %>
-      <p><%= flash[:alert] %></p>
-    <% end %>
     <%= yield %>
   </body>
 </html>

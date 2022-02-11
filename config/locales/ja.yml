@@ -103,6 +103,9 @@ ja:
         update: 更新する
         we_need_your_current_password_to_confirm_your_changes: 変更を反映するには現在のパスワードを入力してください
         back: 戻る
+      user:
+        signed_up: 登録しました
+        updated: 更新しました
     passwords:
       edit:
         title: パスワード変更
