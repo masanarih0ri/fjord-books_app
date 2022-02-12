@@ -6,7 +6,7 @@ class User < ApplicationRecord
 
   has_one_attached :image
 
-  validate :check_content_type, if: :attached?
+  validate :check_content_type, if: :image_attached?
 
   def check_content_type
     content_types = ['image/png', 'image/jpeg', 'image/gif']
@@ -15,7 +15,7 @@ class User < ApplicationRecord
 
   private
 
-  def attached?
+  def image_attached?
     image.attached?
   end
 end
