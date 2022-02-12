@@ -1,0 +1,11 @@
+<h1><%= t('.title') %></h1>
+
+<% if @followings.present? %>
+  <% @followings.each do |following| %>
+    <div>
+      <%= link_to following.name, user_path(following) %>
+    </div>
+  <% end %>
+<% else %>
+  <p><%= t('.no_followings') %></p>
+<% end %>

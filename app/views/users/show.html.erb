@@ -35,7 +35,8 @@
 
 <p>
   <strong><%= t('.followings_count') %>:</strong>
-  <%= @followings.size %>
+  <span><%= @followings.size %></span>
+  <%= link_to t('.followings_list'), user_followings_path(@user) %>
 </p>
 
 <p>
