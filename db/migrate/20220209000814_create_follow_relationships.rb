@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CreateFollowRelationships < ActiveRecord::Migration[6.1]
   def change
     create_table :follow_relationships do |t|
@@ -6,7 +8,7 @@ class CreateFollowRelationships < ActiveRecord::Migration[6.1]
 
       t.timestamps
 
-      t.index %i[ user_id follow_id ], unique: true
+      t.index %i[user_id follow_id], unique: true
     end
   end
 end
