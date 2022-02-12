@@ -9,8 +9,8 @@ class User < ApplicationRecord
   validate :check_content_type, if: :attached?
 
   def check_content_type
-    extension = ['image/png', 'image/jpeg', 'image/gif']
-    errors.add(:image, 'の拡張子が間違っています。.png .jpg .jpeg .gifのいずれかにしてください。') unless image.content_type.in?(extension)
+    content_types = ['image/png', 'image/jpeg', 'image/gif']
+    errors.add(:image, 'の拡張子が間違っています。.png .jpg .jpeg .gifのいずれかにしてください。') unless image.content_type.in?(content_types)
   end
 
   private
