@@ -7,6 +7,12 @@ ja:
         restrict_dependent_destroy:
           has_one: "%{record}が存在しているので削除できません"
           has_many: "%{record}が存在しているので削除できません"
+    attributes:
+      report:
+        title: タイトル
+        body: 内容
+        created_at: 登録日時
+        updated_at: 更新日時
   date:
     abbr_day_names:
     - 日
@@ -240,6 +246,16 @@ ja:
     followers:
       index:
         title: フォロワー
+  reports:
+    create:
+      notice: '日報を新規作成しました'
+      alert: '日報を新規作成できませんでした'
+    update:
+      notice: '日報を更新しました'
+      alert: '日報を更新できませんでした'
+    destroy:
+      notice: '日報を削除しました'
+      alert: '日報を削除できませんでした'
   controllers:
     common:
       notice_create: "%{name}が作成されました。"
