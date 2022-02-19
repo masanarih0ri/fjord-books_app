@@ -3,7 +3,7 @@
 class FollowRelationshipsController < ApplicationController
   def create
     @follow_user = User.find(params[:follow_id])
-    @follow_relationship = FollowRelationship.new(user_id: params[:user_id], follow_id: params[:follow_id])
+    @follow_relationship = FollowRelationship.new(follow_relationship_params)
     if @follow_relationship.save
       flash[:success] = 'ユーザーをフォローしました'
     else
@@ -21,5 +21,11 @@ class FollowRelationshipsController < ApplicationController
       flash[:danger] = 'ユーザーのフォローを解除できませんでした'
     end
     redirect_to user_path(@follow_user)
+  end
+
+  private
+
+  def follow_relationship_params
+    params.permit(:user_id, :follow_id)
   end
 end
