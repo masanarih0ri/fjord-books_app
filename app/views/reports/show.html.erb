@@ -15,6 +15,10 @@
   <%= @report.body %>
 </p>
 
+<%= render 'layouts/shared/comment_form', commentable: @report %>
+
+<%= render 'layouts/shared/comment_list', commentable: @report %>
+
 <% if current_user == @report.user %>
   <%= link_to t('views.common.edit'), edit_report_path(@report) %> |
   <%= link_to t('views.common.destroy'), @report, method: :delete, data: { confirm: t('views.common.delete_confirm') } %> |

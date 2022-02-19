@@ -1,0 +1,6 @@
+<%= form_with(model: [commentable, Comment.new], local: true) do |f| %>
+  <div>
+    <%= f.text_area :content, placeholder: 'コメントを入力してください' %>
+  </div>
+  <%= f.submit %>
+<% end %>
