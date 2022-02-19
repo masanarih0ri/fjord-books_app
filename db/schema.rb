@@ -35,7 +35,7 @@ ActiveRecord::Schema.define(version: 2022_02_09_000814) do
   end
 
   create_table "active_storage_variant_records", force: :cascade do |t|
-    t.bigint "blob_id", null: false
+    t.integer "blob_id", null: false
     t.string "variation_digest", null: false
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
@@ -50,8 +50,8 @@ ActiveRecord::Schema.define(version: 2022_02_09_000814) do
   end
 
   create_table "follow_relationships", force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "follow_id"
+    t.integer "user_id", null: false
+    t.integer "follow_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["follow_id"], name: "index_follow_relationships_on_follow_id"
