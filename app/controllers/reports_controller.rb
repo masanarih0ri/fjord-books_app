@@ -47,7 +47,6 @@ class ReportsController < ApplicationController
       flash[:alert] = t('.alert')
       redirect_to report_path(@report)
     end
-
   end
 
   private
