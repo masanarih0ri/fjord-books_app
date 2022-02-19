@@ -234,6 +234,12 @@ ja:
     application:
       menu: メニュー
       sign_in_as: "%{email} としてログイン中"
+    shared:
+      comment_list:
+        comment: 'コメント'
+        name: '名前'
+      comment_form:
+        placeholder: 'コメントを入力してください'
   users:
     show:
       followings: "%{count} フォロー"
