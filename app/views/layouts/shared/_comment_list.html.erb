@@ -1,5 +1,13 @@
 <h3>コメント</h3>
 <% commentable.comments.each do |comment| %>
+  <div>名前:
+    <% if comment.user.name.present? %>
+      <span><%= comment.user.name %></span>
+    <% else %>
+      <span><%= comment.user.email %></span>
+    <% end %>
+  </div>
   <div><%= comment.content %></div>
-  <div><%= comment.created_at %></div
+  <div><%= comment.created_at %></div>
+  <hr>
 <% end %>

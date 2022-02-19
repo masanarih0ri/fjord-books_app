@@ -1,6 +1,7 @@
 class CommentsController < ApplicationController
   def create
     @comment = @commentable.comments.new(comment_params)
+    @comment.user = current_user
     if @comment.save
       flash[:notice] = 'コメントを作成しました'
     else
