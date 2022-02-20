@@ -4,6 +4,7 @@ class FollowRelationshipsController < ApplicationController
   def create
     @follow_user = User.find(params[:follow_id])
     @follow_relationship = FollowRelationship.new(follow_relationship_params)
+    @follow_relationship.user_id = current_user.id
     if @follow_relationship.save
       flash[:success] = 'ユーザーをフォローしました'
     else
@@ -25,6 +26,6 @@ class FollowRelationshipsController < ApplicationController
   private
 
   def follow_relationship_params
-    params.permit(:user_id, :follow_id)
+    params.permit(:follow_id)
   end
 end
