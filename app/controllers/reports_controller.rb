@@ -26,12 +26,13 @@ class ReportsController < ApplicationController
 
   def update
     @report = Report.find(params[:id])
-    if @report.update(report_params)
+    if @report.user == current_user && @report.update!(report_params)
       flash[:notice] = t('.notice')
+      redirect_to edit_report_path(@report)
     else
       flash[:alert] = t('.alert')
+      render :edit
     end
-    redirect_to edit_report_path(@report)
   end
 
   def show
