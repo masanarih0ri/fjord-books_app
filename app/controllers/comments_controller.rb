@@ -4,12 +4,12 @@ class CommentsController < ApplicationController
   def create
     @comment = @commentable.comments.new(comment_params)
     @comment.user = current_user
-    if @comment.save
+    if @comment.save!
       flash[:notice] = 'コメントを作成しました'
-    else
-      flash[:alert] = 'コメントを作成できませんでした'
+      redirect_to @commentable
     end
-    redirect_to @commentable
+  rescue ActiveRecord::RecordInvalid => e
+    flash[:alert] = e.record.errors.full_messages
   end
 
   private
