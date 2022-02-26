@@ -11,6 +11,7 @@ class ReportsController < ApplicationController
 
   def create
     @report = Report.new(report_params)
+    @report.user = current_user
     if @report.save
       flash[:notice] = t('.notice')
       redirect_to reports_path
@@ -53,6 +54,6 @@ class ReportsController < ApplicationController
   private
 
   def report_params
-    params.require(:report).permit(:title, :body, :user_id)
+    params.require(:report).permit(:title, :body)
   end
 end

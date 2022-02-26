@@ -2,7 +2,6 @@
 
 <%= render 'form', report: @report, user: current_user %>
 
-
 <%= link_to t('views.common.show'), @report %> |
 <% if current_user == @report.user %>
   <%= link_to t('views.common.destroy'), @report, method: :delete, data: { confirm: t('views.common.delete_confirm') } %> |
