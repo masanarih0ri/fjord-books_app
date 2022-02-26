@@ -8,6 +8,6 @@
     <% end %>
   </div>
   <div><%= comment.content %></div>
-  <div><%= comment.created_at.strftime("%Y年%m月%d日 %T") %></div>
+  <div><%= I18n.l(comment.created_at, format: :long) %></div>
   <hr>
 <% end %>
