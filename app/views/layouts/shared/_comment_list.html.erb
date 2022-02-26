@@ -1,5 +1,5 @@
 <h3><%= t('.comment') %></h3>
-<% commentable.comments.each do |comment| %>
+<% comments.each do |comment| %>
   <div><%= t('.name') %>:
     <% if comment.user.name.present? %>
       <span><%= comment.user.name %></span>

@@ -17,7 +17,7 @@
 
 <%= render 'layouts/shared/comment_form', commentable: @report %>
 
-<%= render 'layouts/shared/comment_list', commentable: @report %>
+<%= render 'layouts/shared/comment_list', comments: @report.comments %>
 
 <% if current_user == @report.user %>
   <%= link_to t('views.common.edit'), edit_report_path(@report) %> |
