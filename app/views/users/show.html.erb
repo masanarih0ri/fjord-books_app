@@ -33,6 +33,35 @@
   <% end %>
 </p>
 
+<p>
+  <strong><%= t('.followings_count') %>:</strong>
+  <span><%= @followings.size %></span>
+  <%= link_to t('.followings_list'), user_followings_path(@user) %>
+</p>
+
+<p>
+  <strong><%= t('.followers_count') %>:</strong>
+  <span><%= @followers.size %></span>
+  <%= link_to t('.followers_list'), user_followers_path(@user) %>
+</p>
+
+<%= flash[:success] %>
+<%= flash[:danger] %>
+
+<% unless current_user == @user %>
+  <% if current_user.following?(@user) %>
+    <%= form_with url: follow_relationship_path(@follow_relationship), method: :delete do |form| %>
+      <%= form.hidden_field :follow_id, value: @user.id %>
+      <%= form.submit t('.unfollow') %>
+    <% end %>
+  <% else %>
+    <%= form_with url: follow_relationships_path do |form| %>
+      <%= form.hidden_field :follow_id, value: @user.id %>
+      <%= form.submit t('.follow') %>
+    <% end %>
+  <% end %>
+<% end %>
+
 <% if current_user == @user %>
   <%= link_to t('views.common.edit'), edit_user_registration_path %> |
 <% end %>
