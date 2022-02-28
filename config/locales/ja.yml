@@ -262,6 +262,13 @@ ja:
     destroy:
       notice: '日報を削除しました'
       alert: '日報を削除できませんでした'
+    comments: &comments
+      create:
+        notice: 'コメントを新規作成しました'
+        alert: 'コメントを新規作成できませんでした'
+  books:
+    comments:
+      <<: *comments
   controllers:
     common:
       notice_create: "%{name}が作成されました。"

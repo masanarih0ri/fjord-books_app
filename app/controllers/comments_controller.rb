@@ -5,10 +5,10 @@ class CommentsController < ApplicationController
     @comment = @commentable.comments.new(comment_params)
     @comment.user = current_user
     if @comment.save
-      flash[:notice] = 'コメントを作成しました'
+      flash[:notice] = t('.notice')
       redirect_to @commentable
     else
-      flash[:alert] = 'コメントを作成できませんでした'
+      flash[:alert] = t('.alert')
       if @comment.commentable_type == 'Book'
         @book = Book.find(params[:book_id])
         render 'books/show'
