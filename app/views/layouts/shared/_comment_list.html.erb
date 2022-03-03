@@ -1,0 +1,13 @@
+<h3><%= t('.comment') %></h3>
+<% comments.each do |comment| %>
+  <div><%= t('.name') %>:
+    <% if comment.user.name.present? %>
+      <span><%= comment.user.name %></span>
+    <% else %>
+      <span><%= comment.user.email %></span>
+    <% end %>
+  </div>
+  <div><%= comment.content %></div>
+  <div><%= I18n.l(comment.created_at, format: :long) %></div>
+  <hr>
+<% end %>
