@@ -14,7 +14,6 @@ class UserTest < ActiveSupport::TestCase
   test '#follow' do
     alice = users(:alice)
     bob = users(:bob)
-    
     assert_not alice.following?(bob)
     alice.follow(bob)
     assert alice.following?(bob)
